@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>slideDown demo</title>
+  <style>
+  /* Hi Son, to use the function slideToggle the container that you are using slideToggle with (in this case #hidden) it must be set to display none to get the dropdown menu effect you are looking for. Notice on line 13 how #hidden is set to display none. you should play with this display settings and see what kind of effect it has on the animation */
+  #hidden {
+    background: #de9a44;
+    margin: 3px;
+    width: 80px;
+    height: 40px;
+    display: none;
+    float: left;
+  }
+  #hidden {
+    transition: all;
+    background-color:red;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+<p id="clickMe">Click me!</p>
+<ul id="hidden">
+  <li>list item 1</li>
+  <li>list item 2</li>
+  <li>list item 3</li>
+</ul>
+
+<script>
+
+$("#clickMe").click(function(){// on this line we are setting an event listener. A listener listening for a "click" function on a container with the id of "clickme"
+  $('#hidden').slideToggle("slow");//on this line we are telling our event listener that when someone clicks on #clickme that we will animate the div #hidden
+
+  // in reference to your original question can you use slideDown to toggle your dropdown menu. I currently have this function commented on the line below. If you want to play with these different effects comment line 35 (with two //) and leave line 38 uncommented
+  //$('#hidden').slideDown("slow");
+
+
+});
+
+</script>
+
+</body>
+</html>
